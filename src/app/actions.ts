@@ -34,10 +34,9 @@ export async function subscribeNewsletter(
     };
   }
 
-  const apiKey = process.env.RESEND_API_KEY;
-  const from = process.env.CONTACT_FROM_EMAIL;
+  const formspreeId = process.env.FORMSPREE_ID;
 
-  if (!apiKey || !from) {
+  if (!formspreeId) {
     return {
       status: "error",
       message: "Serviço indisponível. Tente mais tarde.",
@@ -45,27 +44,18 @@ export async function subscribeNewsletter(
   }
 
   try {
-    const response = await fetch("https://api.resend.com/contacts", {
+    const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${apiKey}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
         email,
-        audienceId: process.env.RESEND_AUDIENCE_ID || "",
       }),
     });
 
     if (!response.ok) {
-      const error = await response.json();
-      if (error.message?.includes("already exists")) {
-        return {
-          status: "success",
-          message: "E-mail já inscrito.",
-        };
-      }
-      throw new Error(error.message || "Falha ao inscrever");
+      throw new Error("Falha ao inscrever");
     }
 
     return {

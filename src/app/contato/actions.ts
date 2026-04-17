@@ -1,8 +1,5 @@
 "use server";
 
-import { Resend } from "resend";
-import { site } from "@/lib/site";
-
 export type ContactState = {
   status: "idle" | "success" | "error";
   message: string;
@@ -18,14 +15,7 @@ function sanitize(value: FormDataEntryValue | null) {
   return typeof value === "string" ? value.trim() : "";
 }
 
-function escapeHtml(value: string) {
-  return value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;");
-}
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mkokrpdj";
 
 export async function sendContact(
   _prev: ContactState,
@@ -54,36 +44,14 @@ export async function sendContact(
     };
   }
 
-  const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO_EMAIL ?? site.contact.email;
-  const from = process.env.CONTACT_FROM_EMAIL;
-
-  if (!apiKey || !from) {
-    return {
-      status: "error",
-      message: "Serviço de e-mail indisponível. Tente pelo WhatsApp.",
-    };
-  }
-
-  const resend = new Resend(apiKey);
-
   try {
-    const { error } = await resend.emails.send({
-      from,
-      to,
-      replyTo: email,
-      subject: `Novo contato pelo site — ${nome}`,
-      html: `
-        <h2>Novo contato pelo site</h2>
-        <p><strong>Nome:</strong> ${escapeHtml(nome)}</p>
-        <p><strong>E-mail:</strong> ${escapeHtml(email)}</p>
-        ${telefone ? `<p><strong>Telefone:</strong> ${escapeHtml(telefone)}</p>` : ""}
-        <p><strong>Mensagem:</strong></p>
-        <p style="white-space:pre-wrap">${escapeHtml(mensagem)}</p>
-      `,
+    const response = await fetch(FORMSPREE_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ nome, email, telefone, mensagem }),
     });
 
-    if (error) {
+    if (!response.ok) {
       return {
         status: "error",
         message: "Não foi possível enviar. Tente novamente em instantes.",
