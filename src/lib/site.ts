@@ -18,7 +18,7 @@ export const site = {
   contact: {
     whatsapp: "5561981811620",
     whatsappDisplay: "(61) 98181-1620",
-    email: "contato@caiobrasil.adv.br",
+    email: "brasil@caiobrasiladvocacia.com.br",
     address: {
       street: "SHIN CA 11, Bloco E, Junta B, Sala 307, Pavimento 3",
       district: "Lago Norte",

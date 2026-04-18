@@ -37,7 +37,7 @@ export default function HomePage() {
       "@type": "ContactPoint",
       contactType: "Legal Services",
       telephone: "+55-61-98181-1620",
-      email: "contato@caiobrasil.adv.br",
+      email: "brasil@caiobrasiladvocacia.com.br",
       areaServed: "BR",
     },
     areaOfLaw: [
