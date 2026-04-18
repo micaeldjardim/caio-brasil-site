@@ -82,7 +82,7 @@ export default function ContatoPage() {
     name: "Caio Brasil Advocacia",
     image: "https://caiobrasiladvocacia.com.br/logo.jpg",
     description:
-      "Advocacia preventiva e estratégica em direito trabalhista, cível, criminal e tributário.",
+      "Advocacia preventiva e estratégica em direito trabalhista e cível.",
     address: {
       "@type": "PostalAddress",
       streetAddress: addr.street,

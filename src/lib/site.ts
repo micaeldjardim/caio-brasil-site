@@ -3,7 +3,7 @@ export const site = {
   shortName: "Caio Brasil",
   tagline: "Advocacia que protege quem produz",
   description:
-    "Advocacia preventiva e estratégica em Brasília. Atuação em direito trabalhista, cível, criminal e tributário.",
+    "Advocacia preventiva e estratégica em Brasília. Atuação em direito trabalhista e cível.",
   url: "https://caiobrasiladvocacia.com.br",
   lawyer: {
     name: "Caio Brasil",

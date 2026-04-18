@@ -81,7 +81,7 @@ export const segments: Segment[] = [
     summary:
       "Relações com profissionais da saúde, contratos de prestação de serviço médico e estruturação societária de clínicas.",
     intro:
-      "Clínicas operam em um cruzamento complexo entre direito trabalhista, tributário e empresarial. A relação com profissionais — médicos, dentistas, fisioterapeutas, psicólogos — pode seguir diferentes modelos, cada um com suas implicações jurídicas e fiscais. A estrutura correta começa pela decisão consciente do modelo, documentada e coerente com a prática.",
+      "Clínicas operam em um cruzamento complexo entre direito trabalhista e empresarial. A relação com profissionais — médicos, dentistas, fisioterapeutas, psicólogos — pode seguir diferentes modelos, cada um com suas implicações jurídicas. A estrutura correta começa pela decisão consciente do modelo, documentada e coerente com a prática.",
     risks: [
       {
         title: "Pejotização mal estruturada",
@@ -94,15 +94,15 @@ export const segments: Segment[] = [
           "Em caso de questionamento sobre conduta profissional, a forma como a clínica documentou a relação com o profissional impacta diretamente a extensão da responsabilidade da instituição.",
       },
       {
-        title: "Enquadramento tributário inadequado",
+        title: "Governança e estrutura societária inadequada",
         description:
-          "Clínicas podem se beneficiar de regimes específicos (inclusive equiparação a hospital para fins de IRPJ/CSLL), mas o enquadramento exige requisitos concretos — muitas deixam benefícios na mesa ou se expõem por enquadramento questionável.",
+          "A forma como a clínica é constituída — PJ, sociedade, equiparação — impacta diretamente na responsabilidade legal do profissional e das operações. Decisões de estrutura devem ser conscientes e bem documentadas.",
       },
     ],
     goodPractices: [
       "Escolha consciente do modelo de contratação, com documentação coerente e prática alinhada.",
       "Contratos que delimitam responsabilidades do profissional e da clínica em casos de intercorrência.",
-      "Revisão do enquadramento tributário conforme a operação e a estrutura societária.",
+      "Escolha e formalização adequada da estrutura societária conforme a operação.",
       "Termos de consentimento e políticas de privacidade adequados à LGPD na saúde.",
       "Acompanhamento da adequação às normas do conselho profissional respectivo.",
     ],
@@ -133,15 +133,15 @@ export const segments: Segment[] = [
           "Relações comerciais recorrentes sem instrumento formal funcionam enquanto tudo vai bem — e se tornam disputa quando algo sai do previsto.",
       },
       {
-        title: "Enquadramento fiscal do food service",
+        title: "Contratos com plataformas e franquias sem clareza",
         description:
-          "O setor tem especificidades tributárias que, se ignoradas, custam mais imposto do que o necessário ou expõem a empresa a autuações.",
+          "Operações de food service frequentemente envolvem relações com plataformas, franquias e fornecedores — cada uma com implicações jurídicas que precisam estar claras.",
       },
     ],
     goodPractices: [
       "Procedimentos padronizados de admissão e desligamento, com checklist documental.",
       "Contratos formalizados com fornecedores recorrentes e parceiros de cadeia.",
-      "Revisão periódica do enquadramento fiscal conforme a operação evolui.",
+      "Documentação adequada de contratos com fornecedores, plataformas e parceiros conforme a operação evolui.",
       "Treinamento da liderança operacional sobre comunicação com equipes e fornecedores.",
       "Acompanhamento contínuo para ajustes conforme mudanças na operação.",
     ],

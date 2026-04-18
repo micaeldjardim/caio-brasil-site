@@ -1,11 +1,20 @@
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { Container } from "@/components/ui/Container";
 import { Section, SectionEyebrow, SectionTitle, GoldRule } from "@/components/ui/Section";
 import { ButtonLink } from "@/components/ui/Button";
 import { NewsletterForm } from "@/components/NewsletterForm";
-import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
-import { ProcessDiagram } from "@/components/sections/ProcessDiagram";
 import { site, whatsappLink } from "@/lib/site";
+
+const TestimonialsSection = dynamic(
+  () => import("@/components/sections/TestimonialsSection").then(m => ({ default: m.TestimonialsSection })),
+  { loading: () => null, ssr: true }
+);
+
+const ProcessDiagram = dynamic(
+  () => import("@/components/sections/ProcessDiagram").then(m => ({ default: m.ProcessDiagram })),
+  { loading: () => null, ssr: true }
+);
 
 export default function HomePage() {
   const jsonLd = {
@@ -14,7 +23,7 @@ export default function HomePage() {
     name: "Caio Brasil",
     image: "https://caiobrasiladvocacia.com.br/logo.jpg",
     description:
-      "Advogado especialista em direito trabalhista, cível, criminal e tributário em Brasília, DF.",
+      "Advogado especialista em direito trabalhista e cível em Brasília, DF.",
     url: "https://caiobrasiladvocacia.com.br",
     address: {
       "@type": "PostalAddress",
@@ -34,8 +43,6 @@ export default function HomePage() {
     areaOfLaw: [
       "Direito Trabalhista",
       "Direito Cível",
-      "Direito Criminal",
-      "Direito Tributário",
     ],
     identifier: "DF 46.634",
     legalName: "Antonio Brasil Sociedade Individual de Advocacia",
@@ -63,8 +70,7 @@ export default function HomePage() {
             </h1>
             <GoldRule className="my-8 max-w-[8rem] mx-0" />
             <p className="text-lg md:text-xl text-cream-200 leading-relaxed max-w-2xl">
-              Atuação preventiva e estratégica em direito trabalhista, cível,
-              criminal e tributário. Acompanhamento próximo, orientação clara
+              Atuação preventiva e estratégica em direito trabalhista e cível. Acompanhamento próximo, orientação clara
               e decisões bem fundamentadas para quem toca um negócio.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">

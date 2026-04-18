@@ -12,6 +12,11 @@ export function ContactForm() {
       method="POST"
       className="space-y-5"
     >
+      <input
+        type="hidden"
+        name="_next"
+        value="https://caiobrasiladvocacia.com.br/contato/sucesso"
+      />
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label

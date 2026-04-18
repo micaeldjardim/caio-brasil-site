@@ -25,17 +25,20 @@ export const metadata: Metadata = {
     template: "%s · Caio Brasil Advocacia",
   },
   description:
-    "Advocacia preventiva e estratégica em Brasília. Atuação em direito trabalhista, cível, criminal e tributário.",
+    "Advocacia preventiva e estratégica em Brasília. Atuação em direito trabalhista e cível.",
   openGraph: {
     type: "website",
     locale: "pt_BR",
     siteName: "Caio Brasil Advocacia",
     title: "Caio Brasil Advocacia",
     description:
-      "Advocacia preventiva e estratégica em Brasília. Atuação em direito trabalhista, cível, criminal e tributário.",
+      "Advocacia preventiva e estratégica em Brasília. Atuação em direito trabalhista e cível.",
   },
   robots: { index: true, follow: true },
   icons: { icon: "/favicon.ico" },
+  other: {
+    "preconnect": "https://fonts.googleapis.com",
+  },
 };
 
 export default function RootLayout({

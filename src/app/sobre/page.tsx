@@ -41,7 +41,7 @@ const journey = [
     year: "Formação",
     title: "Bacharel em Direito pelo UniCEUB",
     description:
-      "Formação voltada desde cedo para o diálogo entre as áreas do direito que orientam o dia a dia das empresas — trabalhista, cível, tributário e criminal empresarial.",
+      "Formação voltada desde cedo para o diálogo entre as áreas do direito que orientam o dia a dia das empresas — trabalhista e cível.",
   },
   {
     year: "Primeiros anos",
@@ -106,7 +106,7 @@ export default function SobrePage() {
                 </p>
                 <p>
                   Depois vieram anos de contencioso em diferentes frentes — das
-                  disputas de trabalho às discussões contratuais e tributárias —
+                  disputas de trabalho às discussões contratuais —
                   até a consolidação de uma prática própria em Brasília, voltada
                   a quem precisa de acompanhamento continuado: o dono de
                   negócio, a empresa em crescimento, o profissional liberal que
