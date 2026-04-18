@@ -1,15 +1,6 @@
 "use server";
 
-export type ContactState = {
-  status: "idle" | "success" | "error";
-  message: string;
-  errors?: Partial<Record<"nome" | "email" | "telefone" | "mensagem", string>>;
-};
-
-export const initialContactState: ContactState = {
-  status: "idle",
-  message: "",
-};
+import { type ContactState } from "./types";
 
 function sanitize(value: FormDataEntryValue | null) {
   return typeof value === "string" ? value.trim() : "";

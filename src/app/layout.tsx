@@ -19,7 +19,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://caiobrasil.adv.br"),
+  metadataBase: new URL("https://caiobrasiladvocacia.com.br"),
   title: {
     default: "Caio Brasil Advocacia",
     template: "%s · Caio Brasil Advocacia",
@@ -45,12 +45,12 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Caio Brasil Advocacia",
-    url: "https://caiobrasil.adv.br",
+    url: "https://caiobrasiladvocacia.com.br",
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://caiobrasil.adv.br/search?q={search_term_string}",
+        urlTemplate: "https://caiobrasiladvocacia.com.br/search?q={search_term_string}",
       },
       query_input: "required name=search_term_string",
     },

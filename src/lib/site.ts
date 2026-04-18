@@ -4,7 +4,7 @@ export const site = {
   tagline: "Advocacia que protege quem produz",
   description:
     "Advocacia preventiva e estratégica em Brasília. Atuação em direito trabalhista, cível, criminal e tributário.",
-  url: "https://caiobrasil.adv.br",
+  url: "https://caiobrasiladvocacia.com.br",
   lawyer: {
     name: "Caio Brasil",
     oab: "DF 46.634",

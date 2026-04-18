@@ -80,7 +80,7 @@ export default function ContatoPage() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Caio Brasil Advocacia",
-    image: "https://caiobrasil.adv.br/logo.jpg",
+    image: "https://caiobrasiladvocacia.com.br/logo.jpg",
     description:
       "Advocacia preventiva e estratégica em direito trabalhista, cível, criminal e tributário.",
     address: {
@@ -104,7 +104,7 @@ export default function ContatoPage() {
       bestRating: "5",
       worstRating: "1",
     },
-    url: "https://caiobrasil.adv.br/contato",
+    url: "https://caiobrasiladvocacia.com.br/contato",
     telephone: "+55-61-98181-1620",
     email: site.contact.email,
   };

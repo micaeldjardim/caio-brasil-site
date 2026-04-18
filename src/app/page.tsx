@@ -12,10 +12,10 @@ export default function HomePage() {
     "@context": "https://schema.org",
     "@type": "Attorney",
     name: "Caio Brasil",
-    image: "https://caiobrasil.adv.br/logo.jpg",
+    image: "https://caiobrasiladvocacia.com.br/logo.jpg",
     description:
       "Advogado especialista em direito trabalhista, cível, criminal e tributário em Brasília, DF.",
-    url: "https://caiobrasil.adv.br",
+    url: "https://caiobrasiladvocacia.com.br",
     address: {
       "@type": "PostalAddress",
       streetAddress: "SHIN CA 11, Bloco E, Junta B, Sala 307, Pavimento 3",
